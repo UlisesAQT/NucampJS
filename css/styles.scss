@@ -55,6 +55,14 @@ footer {
 .carousel {
     border: solid $color-secondary;
 }
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+
+}
 
 @import 'modal';
 @import 'review-section';
+@import 'weather';

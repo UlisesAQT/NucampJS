@@ -9,13 +9,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.scss" />
+
+    <!--Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link href="/node_modules/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
     <link href="/node_modules/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
     <link href="/node_modules/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
+   
+    
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.scss" />
+    
     <title>Nucamp: A Better Way To Camp</title>
 </head>
 
@@ -60,6 +68,13 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i
                                 class="fa-solid fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
+                <!-- Weather Component -->
+                 <div id="weather" class="d-none d-md-flex align-items-center">
+                    <i id="weather-icon"></i>
+                    <span id="weather-temp"></span>
+                    <span id="weather-description" class="d-none d-lg-inline"></span>
+                 </div>
+
                 <span class="navbar-text ms-auto">
                     <a role="button" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="fa-solid fa-right-to-bracket"></i> Login
@@ -200,8 +215,13 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div>
-            </div>
+                     <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carouselButton">
+                            <i class="fa-solid fa-pause" id="faButton"></i>
+                        </button>
+                    </div>
+                </div>    
+            </div> 
         </section>
 
         <!-- discover section -->
@@ -217,6 +237,7 @@
                         <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your
                             own reviews!</p>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -302,8 +323,11 @@
     </footer>
 
     <!-- Bootstrap JavaScript plugins -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="js/scripts.js" type="module"></script>
 
 </body>
 
 </html>
+
+
+                
